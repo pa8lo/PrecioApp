@@ -1,0 +1,7 @@
+{
+  "name": "PrecioApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
