@@ -1,0 +1,38 @@
+<ion-item>
+  <ion-label position="floating">Precio Costo</ion-label>
+  <ion-input [(ngModel)]="costo" type="number" (change)="somethingChanged()"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Cantidad Bulto</ion-label>
+  <ion-input [(ngModel)]="cantidad" type="number" (change)="somethingChanged()"></ion-input>
+</ion-item>
+<ion-grid>
+
+  <ion-row>
+    <ion-col size="6" style="text-align: center;">
+      <ion-text color="secondary">
+        <h1>Agregando 40%</h1>
+      </ion-text>
+      $ {{porciento40}}
+    </ion-col>
+    <ion-col size="6" style="text-align: center;">
+      <ion-text color="primary">
+        <h1>Agregando 50%</h1>
+      </ion-text>
+      $ {{porciento50}}
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div style="position: fixed;bottom: 0;width: 100%;"> 
+  <ion-grid color="primary" style="background-color: #3880ff;">
+    <ion-row>
+      <ion-col offset="3" size="2"><ion-button color="success" (click)="addCount()"><ion-icon name="add-outline"></ion-icon></ion-button></ion-col>
+      <ion-col  size="2" style="text-align:center;">
+        <ion-input [(ngModel)]="cantidadAGuardar" type="number" style="color: white; padding-top: 12% !important;" (change)="somethingChanged()"></ion-input>
+      </ion-col>
+      <ion-col  size="2"><ion-button color="danger" (click)="removeCount()"><ion-icon name="remove-outline"></ion-icon></ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button expand="full" color="primary" (click)="addProduct()">Agregar a Lista de Compras</ion-button>
+</div>
